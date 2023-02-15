@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Item(models):
+class Item(models.Model):
     """Экземпляр."""
     name = models.CharField(
         "Наименование",
@@ -13,6 +13,7 @@ class Item(models):
     )
     price = models.IntegerField(
         "Цена",
+        default=0
     )
 
     def __str__(self):
